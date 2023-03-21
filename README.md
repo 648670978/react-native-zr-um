@@ -6,6 +6,16 @@
 `$ npm install react-native-zr-um --save`
 
 
+#### iOS
+在 Info.plist 添加
+
+```
+<key>UM_APPKEY</key>
+<string>友盟appkey</string>
+<key>UM_CHANNEL</key>
+<string>App Store</string>
+```
+
 #### Android
 
 在 android/app/build.gradle 添加
@@ -40,9 +50,9 @@ android {
 
 ## Usage
 ```javascript
-import RNZrUm from 'react-native-zr-um';
+import {initUM} from 'react-native-zr-um';
 
-// TODO: What to do with the module?
-RNZrUm;
+initUM()
+
 ```
   

@@ -15,10 +15,14 @@
 
 RCT_EXPORT_MODULE(RNZrUm)
 
-RCT_EXPORT_METHOD(init:(NSString *)appKey channel:(NSString *)channel) {
+RCT_EXPORT_METHOD(initUM) {
+    NSDictionary * dic =  [[NSBundle mainBundle] infoDictionary];
+    NSString * appKey = dic[@"UM_APPKEY"];
+    NSString * channel = dic[@"UM_CHANNEL"];
     [UMConfigure initWithAppkey:appKey channel:channel];
 }
 
 
 
 @end
+  

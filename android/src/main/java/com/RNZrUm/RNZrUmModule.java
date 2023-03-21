@@ -13,14 +13,16 @@ import com.umeng.commonsdk.UMConfigure;
 public class RNZrUmModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
+  private String appkey;
+  private String channel;
 
   public RNZrUmModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
     Context context = reactContext.getApplicationContext();
-    String UMAppkey = context.getApplicationInfo().metaData.getString("UM_APPKEY");
-    String UMChannel = context.getApplicationInfo().metaData.getString("UM_CHANNEL");
-    UMConfigure.preInit(reactContext,UMAppkey,UMChannel);
+    appkey = context.getApplicationInfo().metaData.getString("UM_APPKEY");
+    channel = context.getApplicationInfo().metaData.getString("UM_CHANNEL");
+    UMConfigure.preInit(reactContext,appkey,channel);
   }
 
   @Override
@@ -29,7 +31,7 @@ public class RNZrUmModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void init(String appkey,String channel) {
+  public void initUM() {
    UMConfigure.init(reactContext,appkey,channel,UMConfigure.DEVICE_TYPE_PHONE, "");
   }
 

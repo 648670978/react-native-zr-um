@@ -4,6 +4,6 @@ import {
 const { RNZrUm } = NativeModules;
 
 
-export function init(appKey,channel) {
-    RNZrUm && RNZrUm.init(appKey,channel);
+export function initUM() {
+    RNZrUm && RNZrUm.initUM();
 }
