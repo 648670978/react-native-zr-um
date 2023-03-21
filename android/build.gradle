@@ -2,6 +2,7 @@
 buildscript {
     repositories {
         jcenter()
+        maven { url 'https://repo1.maven.org/maven2/' }
     }
 
     dependencies {
@@ -12,12 +13,12 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 22
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.minSdkVersion
         versionCode 1
         versionName "1.0"
     }
@@ -28,9 +29,13 @@ android {
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo1.maven.org/maven2/' }
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
+    implementation 'com.facebook.react:react-native:+'
+    // 友盟统计SDK
+    implementation  'com.umeng.umsdk:common:9.5.0'// 必选
+    implementation  'com.umeng.umsdk:asms:1.4.1'// 必选
 }
   

@@ -14,11 +14,11 @@
     "ios",
     "android",
     "src",
-    "RNZrQiniu.podspec"
+    "RNZrUm.podspec"
   ],
   "author": "zr <zr_ars@163.com>",
   "license": "MIT",
-  "homepage":"https://github.com/648670978/react-native-zr-qiniu",
+  "homepage":"https://github.com/648670978/react-native-zr-um",
   "peerDependencies": {
     "react": ">=16.8.6",
     "react-native": ">=0.60.0"
