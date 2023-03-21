@@ -1,0 +1,26 @@
+
+{
+  "name": "react-native-zr-um",
+  "version": "1.0.0",
+  "description": "桥接原生友盟",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "files": [
+    "ios",
+    "android",
+    "src",
+    "RNZrQiniu.podspec"
+  ],
+  "author": "zr <zr_ars@163.com>",
+  "license": "MIT",
+  "homepage":"https://github.com/648670978/react-native-zr-qiniu",
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "react-native": ">=0.60.0"
+  }
+}
