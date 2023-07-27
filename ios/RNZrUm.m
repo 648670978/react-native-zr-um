@@ -2,6 +2,10 @@
 #import "RNZrUm.h"
 #import <UMCommon/UMCommon.h>
 
+#import <UMAPM/UMLaunch.h>
+#import <UMAPM/UMCrashConfigure.h>
+#import <UMAPM/UMAPMConfig.h>
+
 @implementation RNZrUm
 
 - (dispatch_queue_t)methodQueue
@@ -22,6 +26,9 @@ RCT_EXPORT_METHOD(initUM) {
     [UMConfigure initWithAppkey:appKey channel:channel];
 }
 
+RCT_EXPORT_METHOD(setCrash:(NSString *)error) {
+    [UMCrashConfigure reportExceptionWithName:@"主动上报" reason:error stackTrace:@[]];
+}
 
 
 @end

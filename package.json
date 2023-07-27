@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-zr-um",
-  "version": "1.0.3",
+  "version": "1.0.8",
   "description": "桥接原生友盟",
   "main": "index.js",
   "scripts": {

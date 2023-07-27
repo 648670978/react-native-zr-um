@@ -13,6 +13,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
+import com.umeng.umcrash.UMCrash;
 
 public class RNZrUmModule extends ReactContextBaseJavaModule {
 
@@ -42,6 +43,11 @@ public class RNZrUmModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void initUM() {
    UMConfigure.init(reactContext,appkey,channel,UMConfigure.DEVICE_TYPE_PHONE, "");
+  }
+
+  @ReactMethod
+  public void setCrash(String error) {
+    UMCrash.generateCustomLog(error,"UmengException");
   }
 
   @ReactMethod

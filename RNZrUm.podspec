@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   s.dependency 'React-Core'
   s.dependency 'UMCommon', '7.3.8'
   s.dependency 'UMDevice', '2.2.1'
+  s.dependency 'UMAPM', '1.8.3'
 
 end
 

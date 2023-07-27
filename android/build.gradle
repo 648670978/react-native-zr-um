@@ -37,5 +37,7 @@ dependencies {
     // 友盟统计SDK
     implementation  'com.umeng.umsdk:common:9.5.0'// 必选
     implementation  'com.umeng.umsdk:asms:1.4.1'// 必选
+    implementation  'com.umeng.umsdk:apm:1.5.2'
+
 }
   
